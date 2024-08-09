@@ -100,3 +100,21 @@ function getColumnsWithHeader(header, headerRow, sheetName) {
   });
   return matchedHeaders;
 }
+
+class Range {
+  constructor(top, right, bottom, left) {
+    this.top = top;
+    this.right = right;
+    this.bottom = bottom;
+    this.left = left;
+  }
+}
+
+class Subscription{
+  constructor(sheetName, range, handler, eventType){
+    this.sheetName = sheetName;
+    this.range = range;
+    this.handler = handler;
+    this.eventType = eventType;
+  }
+}
